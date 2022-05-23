@@ -16,18 +16,18 @@ for ($i = 0; $i < $countfiles; $i++) {
     if ($fileType === "application/octet-stream") {
 
         $ArrayData = include "$tmp_name";
-
+        
     } elseif ($fileType === "application/json") {
 
         $ArrayData = json_decode(file_get_contents($tmp_name), true);
     }
 
-    $fp = fopen("./Excels/$fileNameCmps[0].xls", "w");
+    $fp = fopen("./Excels/$fileNameCmps[0].csv", "w");
 
     fputcsv($fp, ['Value', 'English']);
 
     foreach ($ArrayData as $key => $value) {
-        fputcsv($fp, [$value, $key]);
+        fputcsv($fp, [$key, $value]);
     }
 
     fclose($fp);
