@@ -13,7 +13,7 @@ for ($i = 0; $i < $countfiles; $i++) {
 
     $fileNameCmps = explode(".", $filename);
 
-    if ($fileType === "application/octet-stream") {
+    if ($fileType === "application/x-php") {
 
         $ArrayData = include "$tmp_name";
         
