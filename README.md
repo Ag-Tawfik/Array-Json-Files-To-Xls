@@ -53,9 +53,6 @@ chmod 755 Excels
 - Maximum file size: 5MB per file
 - Supported JSON structures:
   - Simple key-value pairs
-  - Nested objects
-  - Arrays
-  - Mixed data types
 
 ## Testing
 
